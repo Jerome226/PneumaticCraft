@@ -61,8 +61,18 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = Names.MOD_ID, name = "PneumaticCraft", guiFactory = "pneumaticCraft.client.GuiConfigHandler", dependencies = "required-after:Forge@[10.13.3.1388,);" + "after:Forestry;after:" + ModIds.COMPUTERCRAFT)
+@Mod(
+        modid = PneumaticCraft.MODID,
+        name = PneumaticCraft.NAME,
+        version = PneumaticCraft.VERSION,
+        guiFactory = "pneumaticCraft.client.GuiConfigHandler",
+        dependencies = "required-after:Forge@[10.13.3.1388,);" + "after:Forestry;after:" + ModIds.
+)
 public class PneumaticCraft{
+
+    public static final String NAME = "GRADLETOKEN_MODNAME";
+    public static final String MODID = "GRADLETOKEN_MODID";
+    public static final String VERSION = "GRADLETOKEN_VERSION";
 
     @SidedProxy(clientSide = "pneumaticCraft.proxy.ClientProxy", serverSide = "pneumaticCraft.proxy.CommonProxy")
     public static CommonProxy proxy;

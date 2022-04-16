@@ -1,16 +1,20 @@
-[
 {
-"modid"   : "PneumaticCraft",
-"name"    : "PneumaticCraft",
-"version": "${version}",
-"mcversion": "$mcversion",
-"authors" : [ "MineMaarten" ],
-"description" : "A technical mod all about pneumatics!",
-"url" : "www.minemaarten.com",
-"credits" : "Made by MineMaarten, artwork (re)done by Thelder and Morton00000!",
-"updateUrl" : "http://www.minemaarten.com/downloads/",
-"logoFile" : "http://www.minemaarten.com/wp-content/uploads/2013/06/2013-06-08_18.29.17.png",
-"parent" : "",
-"screenshots":["http://www.minemaarten.com/wp-content/uploads/2013/06/2013-06-08_18.29.17.png"]
+	"modListVersion": 2,
+	"modList": [{
+		"modid": "${modId}",
+		"name": "${modName}",
+		"description": "Some oddities from PneumaticCraft",
+		"version": "${modVersion}",
+		"mcversion": "${minecraftVersion}",
+		"url": "https://github.com/Jerome226/PNC-Oddities",
+		"updateUrl": "",
+		"authorList": ["MineMaarten"],
+		"credits": "Made by MineMaarten, artwork (re)done by Thelder and Morton00000!",
+		"screenshots": [],
+		"parent": "",
+		"requiredMods": [],
+		"dependencies": [],
+		"dependants": [],
+		"useDependencyInformation": true
+	}]
 }
-]
