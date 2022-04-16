@@ -22,10 +22,6 @@ repositories {
         }
     }
     maven {
-        name = "IGW"
-        url = "http://maven.k-4u.nl/"
-    }
-    maven {
         url "https://cursemaven.com"
     }
     maven {
