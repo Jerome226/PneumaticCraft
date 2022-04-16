@@ -7,6 +7,9 @@ dependencies {
     compile("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
     runtime('com.github.GTNewHorizons:OpenComputers:1.7.5.23-GTNH:dev') { transitive = false}
 
+    compile('curse.maven:cofh-lib-220333:2388748')
+    compile('curse.maven:computercraft-67504:2269339')
+
     compileOnly('com.github.GTNewHorizons:NotEnoughItems:2.2.6-GTNH:dev') {transitive=false}
     compileOnly('com.github.GTNewHorizons:waila:1.5.18:dev') {transitive=false}
 }

@@ -14,7 +14,6 @@ import pneumaticCraft.common.thirdparty.cofh.CoFHCore;
 import pneumaticCraft.common.thirdparty.computercraft.ComputerCraft;
 import pneumaticCraft.common.thirdparty.computercraft.OpenComputers;
 import pneumaticCraft.common.thirdparty.fmp.FMPLoader;
-import pneumaticCraft.common.thirdparty.forestry.Forestry;
 import pneumaticCraft.common.thirdparty.openblocks.OpenBlocks;
 import pneumaticCraft.common.thirdparty.waila.Waila;
 import pneumaticCraft.lib.Log;
@@ -42,7 +41,6 @@ public class ThirdPartyManager implements IGuiHandler{
             thirdPartyClasses.put(ModIds.FMP, FMPLoader.class);
             thirdPartyClasses.put(ModIds.WAILA, Waila.class);
             thirdPartyClasses.put(ModIds.CHISEL, Chisel.class);
-            thirdPartyClasses.put(ModIds.FORESTRY, Forestry.class);
             thirdPartyClasses.put(ModIds.OPEN_BLOCKS, OpenBlocks.class);
             thirdPartyClasses.put(ModIds.COFH_CORE, CoFHCore.class);
             thirdPartyClasses.put(ModIds.NOT_ENOUGH_KEYS, NotEnoughKeys.class);
