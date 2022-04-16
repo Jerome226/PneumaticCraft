@@ -16,14 +16,14 @@ public class NEIPluginInitConfig implements IConfigureNEI{
 
         Log.info("Initializing " + getName() + "...");
 
-        registerHandler(new NEIPressureChamberRecipeManager());
-        registerHandler(new NEIAssemblyControllerRecipeManager());
-        registerHandler(new NEIThermopneumaticProcessingPlantManager());
-        registerHandler(new NEIRefineryManager());
-        registerHandler(new NEIEtchingAcidManager());
-        registerHandler(new NEIUVLightBoxManager());
-        registerHandler(new NEIAmadronTradeManager());
-        registerHandler(new NEIPlasticMixerManager());
+        //registerHandler(new NEIPressureChamberRecipeManager());
+        //registerHandler(new NEIAssemblyControllerRecipeManager());
+        //registerHandler(new NEIThermopneumaticProcessingPlantManager());
+        //registerHandler(new NEIRefineryManager());
+        //registerHandler(new NEIEtchingAcidManager());
+        //registerHandler(new NEIUVLightBoxManager());
+        //registerHandler(new NEIAmadronTradeManager());
+        //registerHandler(new NEIPlasticMixerManager());
 
         GuiContainerManager.addDrawHandler(new ItemDrawHandler());
 
