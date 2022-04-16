@@ -66,7 +66,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
         name = PneumaticCraft.NAME,
         version = PneumaticCraft.VERSION,
         guiFactory = "pneumaticCraft.client.GuiConfigHandler",
-        dependencies = "required-after:Forge@[10.13.3.1388,);" + "after:Forestry;after:" + ModIds.
+        dependencies = "required-after:Forge@[10.13.3.1388,);" + "after:Forestry;after:" + ModIds.COMPUTERCRAFT
 )
 public class PneumaticCraft{
 
