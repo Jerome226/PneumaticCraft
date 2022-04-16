@@ -1,7 +1,5 @@
 package pneumaticCraft.client.gui;
 
-import igwmod.gui.GuiWiki;
-
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.util.ArrayList;
@@ -250,7 +248,6 @@ public class GuiProgrammer extends GuiPneumaticContainerBase<TileEntityProgramme
     protected void drawGuiContainerForegroundLayer(int x, int y){
         super.drawGuiContainerForegroundLayer(x, y);
 
-        boolean igwLoaded = Loader.isModLoaded(ModIds.IGWMOD);
         fontRendererObj.drawString(widgetPage + 1 + "/" + (maxPage + 1), 305, 175, 0xFF000000);
         fontRendererObj.drawString(I18n.format("gui.programmer.difficulty"), 263, 190, 0xFF000000);
 
@@ -262,7 +259,6 @@ public class GuiProgrammer extends GuiPneumaticContainerBase<TileEntityProgramme
             if(widget != draggingWidget && x - guiLeft >= widget.getX() && y - guiTop >= widget.getY() && x - guiLeft <= widget.getX() + widget.getWidth() / 2 && y - guiTop <= widget.getY() + widget.getHeight() / 2) {
                 List<String> tooltip = new ArrayList<String>();
                 widget.getTooltip(tooltip);
-                if(igwLoaded) tooltip.add(I18n.format("gui.programmer.pressIForInfo"));
                 if(tooltip.size() > 0) drawHoveringString(tooltip, x - guiLeft, y - guiTop, fontRendererObj);
             }
         }
@@ -273,9 +269,6 @@ public class GuiProgrammer extends GuiPneumaticContainerBase<TileEntityProgramme
     protected void keyTyped(char key, int keyCode){
         super.keyTyped(key, keyCode);
 
-        if(Keyboard.KEY_I == keyCode && Loader.isModLoaded(ModIds.IGWMOD)) {
-            onIGWAction();
-        }
         if(Keyboard.KEY_R == keyCode) {
             if(exportButton.getBounds().contains(lastMouseX, lastMouseY)) {
                 NetworkHandler.sendToServer(new PacketGuiButton(0));
@@ -296,27 +289,6 @@ public class GuiProgrammer extends GuiPneumaticContainerBase<TileEntityProgramme
         }
         if(Keyboard.KEY_Y == keyCode) {
             NetworkHandler.sendToServer(new PacketGuiButton(redoButton.id));
-        }
-    }
-
-    @Optional.Method(modid = ModIds.IGWMOD)
-    private void onIGWAction(){
-        int x = lastMouseX;
-        int y = lastMouseY;
-
-        IProgWidget hoveredWidget = programmerUnit.getHoveredWidget(x, y);
-        if(hoveredWidget != null) {
-            GuiWiki gui = new GuiWiki();
-            FMLClientHandler.instance().showGuiScreen(gui);
-            gui.setCurrentFile("pneumaticcraft:progwidget/" + hoveredWidget.getWidgetString());
-        }
-
-        for(IProgWidget widget : visibleSpawnWidgets) {
-            if(widget != draggingWidget && x - guiLeft >= widget.getX() && y - guiTop >= widget.getY() && x - guiLeft <= widget.getX() + widget.getWidth() / 2 && y - guiTop <= widget.getY() + widget.getHeight() / 2) {
-                GuiWiki gui = new GuiWiki();
-                FMLClientHandler.instance().showGuiScreen(gui);
-                gui.setCurrentFile("pneumaticcraft:progwidget/" + widget.getWidgetString());
-            }
         }
     }
 

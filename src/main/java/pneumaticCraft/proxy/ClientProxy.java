@@ -106,7 +106,6 @@ import pneumaticCraft.common.item.Itemss;
 import pneumaticCraft.common.recipes.CraftingRegistrator;
 import pneumaticCraft.common.semiblock.ItemSemiBlockBase;
 import pneumaticCraft.common.thirdparty.ThirdPartyManager;
-import pneumaticCraft.common.thirdparty.igwmod.IGWSupportNotifier;
 import pneumaticCraft.common.tileentity.TileEntityAdvancedAirCompressor;
 import pneumaticCraft.common.tileentity.TileEntityAdvancedLiquidCompressor;
 import pneumaticCraft.common.tileentity.TileEntityAirCannon;
